@@ -7,15 +7,51 @@
   </head>
   <body>
     <a-scene>
-      <a-asset-item id="HomeVR" src="/scene.glb"></a-asset-item>
-            <a-entity id="scene1" position="0 -1 0" visible="true">
-        <a-gltf-model src="#location1" scale="1 1 1"></a-gltf-model>
+      <a-asset-item
+        id="HomeVR"
+        src="/assets/classroom_merged.glb"></a-asset-item>
+
+      <!--Room1-->
+      <a-entity id="vrhome" position="0 -1 0" visible="true">
+        <a-gltf-model src="#HomeVR" scale="1 1 1"></a-gltf-model>
+        <!--Room1-->
+        <a-box
+          color="red"
+          position="-5 1 -2"
+          scale="0.5 0.5 0.5"
+          onclick="scene_2()">
+          <a-text
+            value="Click box to teleport to garage"
+            rotation="0 90 0"
+            position="0 1 1"></a-text>
+        </a-box>
+      </a-entity>
 
       <!--Player viewport-->
-      <a-camera position="0 0 0">
+      <a-camera position="0 0w 0">
         <!--Cursor Circle-->
         <a-cursor color="red"></a-cursor>
       </a-camera>
     </a-scene>
+
+    <!--Scene switch script-->
+    <script type="text/javascript">
+      // Teleport to scene one
+      function vrhome() {
+        document.getElementById("vrhome").setAttribute("visible", "true");
+      }
+
+      // Teleport to scene two
+      function scene_2() {
+        document.getElementById("vrhome").setAttribute("visible", "false");
+        // Add logic to switch to scene 2
+      }
+
+      // Teleport to scene three
+      function scene_3() {
+        document.getElementById("vrhome").setAttribute("visible", "false");
+        // Add logic to switch to scene 3
+      }
+    </script>
   </body>
 </html>
