@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/aframe.js"></script>
+    <title>VR Tour</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url("pics/hub2landing.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .main-section {
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Add background color with opacity */
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Add this to make it relative for absolute positioning */
+        color: white; /* Add this to ensure text is visible */
+      }
+
+      .content {
+        position: relative;
+        z-index: 1; /* Add this to ensure content is above the background */
+        text-align: center;
+      }
+
+      nav {
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Add background color with opacity */
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 10px 0;
+        color: white;
+        z-index: 2; /* Ensure nav is above background image */
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0 20px;
+      }
+      footer {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      footer a {
+        color: white;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+
+      /* Add a separate class for centering */
+      .center {
+        flex: 1;
+        text-align: center; /* Center text horizontally */
+      }
+
+      .logo {
+        position: absolute;
+        top: -100px; /* Adjust this value as needed */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3; /* Ensure logo is above nav and footer */
+        width: 300px;
+      }
+
+      h1,
+      button {
+        margin-top: 20px; /* Adjust as needed */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/aboutus.html">About Us</a>
+      <a href="/contactus.html">Contact Us</a>
+    </nav>
+
+    <div class="main-section">
+      <div class="content">
+        <img src=".//pics/lsbulogo1.png" class="logo" />
+
+        <h1>Welcome London South Bank University VR Tour!</h1>
+        <a href="/vrhome.html" class="button"><button>Start VR Tour</button></a>
+      </div>
+    </div>
+
+    <footer>
+      <p class="center">Developed By Team: Dimension Dreamers</p>
+      <a href="#">Contact Us</a>
+    </footer>
+  </body>
+</html>

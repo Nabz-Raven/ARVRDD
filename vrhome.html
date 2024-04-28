@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html class="a-fullsceen" foxifeild>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="/aframe.js"></script>
+    <title>VR Home Base</title>
+  </head>
+  <body>
+    <a-scene>
+      <a-asset-item id="HomeVR" src="/scene.glb"></a-asset-item>
+            <a-entity id="scene1" position="0 -1 0" visible="true">
+        <a-gltf-model src="#location1" scale="1 1 1"></a-gltf-model>
+
+      <!--Player viewport-->
+      <a-camera position="0 0 0">
+        <!--Cursor Circle-->
+        <a-cursor color="red"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
