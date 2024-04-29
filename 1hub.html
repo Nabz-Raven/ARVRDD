@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="a-fullscreen">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="/aframe.js"></script>
+    <title>Hub Picture 360</title>
+  </head>
+  <body>
+    <a-scene
+      inspector=""
+      keyboard-shortcuts=""
+      screenshot=""
+      vr-mode-ui=""
+      device-orientation-permission-ui="">
+      <!-- Add a 360-degree panoramic image -->
+      <a-sky
+        src="/pics/The Hub 360 Picture.jpg"
+        rotation="0 -90 0"
+        position="0 -31.06 0"></a-sky>
+
+      <!-- Add text on the picture -->
+      <a-text
+        value="Welcome to The Hub"
+        color="white"
+        position="-1 2 -4"
+        scale="2 2 2"
+        text=""></a-text>
+
+      <!-- Add a plane with an image -->
+      <a-plane
+        color="white"
+        position="5.9 2.06 -2.93"
+        width="3"
+        height="3"
+        rotation="0 -49.85 0"
+        id="clickablePlane">
+        <a-image src="/pics/hublanding.jpg" width="3" height="3"></a-image>
+        <a-text
+          value="Click on Video"
+          color="black"
+          align="center"
+          position="0 -1.78 0"
+          scale="2 2 2"
+          text="color: #ffffff"></a-text>
+      </a-plane>
+
+      <!--Return VR HOME-->
+
+      <a-entity position="-2.97 -0.06 -5.44047" rotation="0.36 27.8 0">
+        <a-box
+          color="red"
+          depth="1"
+          height="1"
+          width="1"
+          onclick="window.location.href = '/vrhome.html';"></a-box>
+        <a-text
+          value="Back to Menu"
+          color="white"
+          position="-0.7 0.68 0"
+          text=""></a-text>
+      </a-entity>
+
+      <a-camera
+        position="1.20065 1.53475 -0.39881"
+        rotation="-8.823550045014683 126.16530648780733 0"
+        wasd-controls="acceleration: 25; easing: 10;">
+        <!--Cursor Circle-->
+        <a-cursor color="red"></a-cursor>
+      </a-camera>
+      <div class="a-loader-title" style="display: none">
+        Hub 360 Picture
+      </div></a-scene
+    >
+
+    <script>
+      // Add event listener to the clickable plane
+      var clickablePlane = document.getElementById("clickablePlane");
+      clickablePlane.addEventListener("click", function () {
+        window.location.href = "/1.1hubvideo.html"; // Redirect to the next page
+      });
+    </script>
+  </body>
+</html>
