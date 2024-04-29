@@ -1,84 +1,129 @@
 <!DOCTYPE html>
-<html class="a-fullsceen" foxifeild>
+<html class="a-fullscreen">
   <head>
     <meta charset="UTF-8" />
     <script src="/aframe.js"></script>
+
     <title>VR Home Base</title>
   </head>
   <body>
-    <a-scene>
+    <a-scene inspector>
+      <!-- Asset Items -->
       <a-asset-item
         id="HomeVR"
         src="/assets/classroom_merged.glb"></a-asset-item>
 
-      <!--Room1-->
-      <a-entity id="vrhome" position="0 -1 0" visible="true">
+      <!-- Scene 1 - VR Menu -->
+      <a-entity id="vrmenu" position="0 -1 0" visible="true">
         <a-gltf-model src="#HomeVR" scale="1 1 1"></a-gltf-model>
-      </a-entity>
-      <a-text value="VR Menu" position="-2 1.5 -6" color="black"> </a-text>
+        <a-text value="VR Menu" position="-2 1.5 -6" color="black"></a-text>
 
-      <!--Room1-->
-      <a-entity id="vrhome" position="0 -1 0" visible="true">
-        <a-gltf-model src="#HomeVR" scale="1 1 1"></a-gltf-model>
-      </a-entity>
-      <a-text value="Welcome to the Room" position="-2 1.5 -6" color="black">
-      </a-text>
+        <!-- Buttons within the scene -->
+        <a-entity position="-5 1.5 0.5">
+          <a-text value="Hub" color="black"></a-text>
+          <a-plane
+            color="blue"
+            width="0.5"
+            height="0.5"
+            depth="0.1"
+            onclick="scene_1()"></a-plane>
+        </a-entity>
 
-      <!--Player viewport-->
-      <a-camera position="0 0 0" rotation="190 180 0">
-        <!--Cursor Circle-->
+        <a-entity position="-5 1 1">
+          <a-text value="Extension" color="black"></a-text>
+          <a-plane
+            color="green"
+            width="0.5"
+            height="0.5"
+            depth="0.1"
+            onclick="scene_2()"></a-plane>
+        </a-entity>
+
+        <a-entity position="-5 0.5 1.5">
+          <a-text value="Keyworth" color="black"></a-text>
+          <a-plane
+            color="red"
+            width="0.5"
+            height="0.5"
+            depth="0.1"
+            onclick="scene_3()"></a-plane>
+        </a-entity>
+
+        <!-- New buttons -->
+        <a-entity position="-5 0 2">
+          <a-text value="Robot" color="black"></a-text>
+          <a-plane
+            color="yellow"
+            width="0.5"
+            height="0.5"
+            depth="0.1"
+            onclick="scene_4()"></a-plane>
+        </a-entity>
+
+        <a-entity position="-5 -0.5 2.5">
+          <a-text value="Faraday" color="black"></a-text>
+          <a-plane
+            color="orange"
+            width="0.5"
+            height="0.5"
+            depth="0.1"
+            onclick="scene_5()"></a-plane>
+        </a-entity>
+
+        <a-entity position="-5 -1 3">
+          <a-text value="Return Home" color="black"></a-text>
+          <a-plane
+            color="purple"
+            width="0.5"
+            height="0.5"
+            depth="0.1"
+            onclick="scene_6()"></a-plane>
+        </a-entity>
+      </a-entity>
+
+      <!-- Player viewport -->
+      <a-camera position="-0.139 0.640 -0.303" rotation="0 90 0">
+        <!-- Cursor Circle -->
         <a-cursor color="red"></a-cursor>
       </a-camera>
-
-      <!-- Buttons within the scene -->
-      <a-entity position="-2 1 -3">
-        <a-text value="Scene 1" color="black"></a-text>
-        <a-plane
-          color="blue"
-          width="2"
-          height="1"
-          depth="0.1"
-          onclick="scene_1()"></a-plane>
-      </a-entity>
-
-      <a-entity position="0 1 -3">
-        <a-text value="Scene 2" color="black"></a-text>
-        <a-plane
-          color="green"
-          width="2"
-          height="1"
-          depth="0.1"
-          onclick="scene_2()"></a-plane>
-      </a-entity>
-
-      <a-entity position="2 1 -3">
-        <a-text value="Scene 3" color="black"></a-text>
-        <a-plane
-          color="red"
-          width="2"
-          height="1"
-          depth="0.1"
-          onclick="scene_3()"></a-plane>
-      </a-entity>
-      <!-- Add more buttons for other scenes as needed -->
     </a-scene>
 
-    <!--Scene switch script-->
+    <!-- Scene switch script -->
     <script type="text/javascript">
-      // Teleport to scene one
-      function vrhome() {
-        document.getElementById("vrhome").setAttribute("visible", "true");
-      }
-      // Teleport to scene two
-      function scene_2() {
-        document.getElementById("vrhome").setAttribute("visible", "false");
-        // Add logic to switch to scene 2
+      // Teleport to VR Menu scene
+      function scene_1() {
+        document.getElementById("vrmenu").setAttribute("visible", "true");
+        document.getElementById("vrwelcome").setAttribute("visible", "false");
       }
 
-      // Teleport to scene three
+      // Teleport to Extension scene
+      function scene_2() {
+        document.getElementById("vrmenu").setAttribute("visible", "false");
+        document.getElementById("vrwelcome").setAttribute("visible", "true");
+      }
+
+      // Teleport to Keyworth scene
       function scene_3() {
-        document.getElementById("vrhome").setAttribute("visible", "false");
-        // Add logic to switch to scene 3
+        document.getElementById("vrmenu").setAttribute("visible", "false");
+        document.getElementById("vrwelcome").setAttribute("visible", "true");
+      }
+
+      // Teleport to Robot scene
+      function scene_4() {
+        document.getElementById("vrmenu").setAttribute("visible", "false");
+        document.getElementById("vrwelcome").setAttribute("visible", "true");
+      }
+
+      // Teleport to Faraday scene
+      function scene_5() {
+        document.getElementById("vrmenu").setAttribute("visible", "false");
+        document.getElementById("vrwelcome").setAttribute("visible", "true");
+      }
+
+      // Teleport to Return Home scene
+      function scene_6() {
+        document.getElementById("vrmenu").setAttribute("visible", "false");
+        document.getElementById("vrwelcome").setAttribute("visible", "true");
       }
     </script>
   </body>
