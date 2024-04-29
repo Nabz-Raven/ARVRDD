@@ -54,3 +54,60 @@
     </a-scene>
   </body>
 </html>
+
+<!DOCTYPE html>
+<html class="a-fullscreen">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="/aframe.js"></script>
+    <title>Robot Tour 360 Video</title>
+  </head>
+  <body>
+    <a-scene
+      inspector=""
+      keyboard-shortcuts=""
+      screenshot=""
+      vr-mode-ui=""
+      device-orientation-permission-ui="">
+      <!-- Add a 360-degree video -->
+      <a-videosphere
+        src="/videos/Robot.mp4"
+        autoplay="true"
+        loop="true"
+        muted="true"
+        material=""
+        geometry=""
+        position=""></a-videosphere>
+      <a-entity position="3.93 1.42 1.19" rotation="0.36 260 0">
+        <a-box
+          color="red"
+          depth="1"
+          height="1"
+          width="1"
+          onclick="window.location.href = '/vrhome.html';"
+          material=""
+          geometry=""></a-box>
+        <a-text
+          value="Back to Menu"
+          color="white"
+          position="-0.7 0.68 0"
+          text="color: #000000"></a-text>
+      </a-entity>
+
+      <a-camera
+        position="-4.590613364505865 1.53475 1.5126778969577817"
+        rotation="-17.647100090029365 167.87663397333102 0"
+        wasd-controls="acceleration: 25;
+    easing: 10;"
+        data-aframe-inspector-original-camera=""
+        camera=""
+        look-controls="">
+        <!--Cursor Circle-->
+        <a-cursor color="red"></a-cursor>
+      </a-camera>
+      <div class="a-loader-title" style="display: none">
+        Robot Tour 360 Video
+      </div>
+    </a-scene>
+  </body>
+</html>

@@ -68,3 +68,74 @@
     </a-scene>
   </body>
 </html>
+
+<!DOCTYPE html>
+<html class="a-fullscreen">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="/aframe.js"></script>
+    <title>LSBU HUb 360 Video</title>
+  </head>
+  <body>
+    <a-scene
+      inspector=""
+      keyboard-shortcuts=""
+      screenshot=""
+      vr-mode-ui=""
+      device-orientation-permission-ui="">
+      <!-- Add a 360-degree video -->
+      <a-videosphere
+        src="/videos/Faraday.mp4"
+        autoplay="true"
+        loop="true"
+        muted="true"
+        material=""
+        geometry=""
+        position=""></a-videosphere>
+      <a-entity position="-3.58129 -0.43 -7.41" rotation="0.07 0 0">
+        <a-box
+          color="red"
+          depth="1"
+          height="1"
+          width="1"
+          onclick="window.location.href = '/vrhome.html';"
+          material=""
+          geometry=""></a-box>
+        <a-text
+          value="Back to Menu"
+          color="white"
+          position="-0.7 0.68 0"
+          text="color: #ffffff"></a-text>
+      </a-entity>
+
+      <!-- Add a clickable object to go back to the picture -->
+      <a-entity position="-9.74719 -0.47 -3.48" rotation="5.12 64.22 0">
+        <a-box
+          color="blue"
+          depth="1"
+          height="1"
+          width="1"
+          onclick="window.location.href = '/4faraday.html';"
+          material=""
+          geometry=""></a-box>
+        <a-text
+          value="Back to 360 picture"
+          color="white"
+          position="-0.97 0.71 -0.7"
+          text="color: #000000"></a-text>
+      </a-entity>
+
+      <a-camera
+        position="-4.785529933986573 1.53475 -0.3775630385925675"
+        rotation="0 122.56000000000002 0"
+        wasd-controls="acceleration: 25; easing: 10;">
+        <!--Cursor Circle-->
+        <a-cursor color="red" cursor=""></a-cursor>
+      </a-camera>
+
+      <div class="a-loader-title" style="display: none">
+        Faraday Wing 360 Video
+      </div>
+    </a-scene>
+  </body>
+</html>
