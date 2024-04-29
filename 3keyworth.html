@@ -35,15 +35,12 @@
         width="3"
         height="3"
         rotation="0 51.5 0"
-        id="clickablePlane"
-        material=""
-        geometry="">
+        id="clickablePlane">
         <a-image
           src="/pics/keyworthlanding.jpg"
           width="3"
           height="3"
-          material=""
-          geometry=""></a-image>
+          material=""></a-image>
         <a-text
           value="Click on Video"
           color="black"
@@ -61,9 +58,7 @@
           depth="1"
           height="1"
           width="1"
-          onclick="window.location.href = '/vrhome.html';"
-          material=""
-          geometry=""></a-box>
+          onclick="window.location.href = '/vrhome.html';"></a-box>
         <a-text
           value="Back to Menu"
           color="white"
@@ -74,25 +69,15 @@
       <a-camera
         position="1.20065 1.53475 -0.39881"
         rotation="1.718873385392469 -5.271211715203574 0"
-        wasd-controls="acceleration: 30"
-        camera=""
-        look-controls=""
-        data-aframe-inspector-original-camera="">
+        wasd-controls="acceleration: 25;
+    easing: 10;">
         <!--Cursor Circle-->
-        <a-cursor
-          color="red"
-          material=""
-          raycaster=""
-          cursor=""
-          geometry=""></a-cursor>
+        <a-cursor color="red"></a-cursor>
       </a-camera>
       <div class="a-loader-title" style="display: none">
         Keyworth 360 Picture
       </div>
-      <div class="a-loader-title" style="display: none">
-        Extension Block 360
-      </div></a-scene
-    >
+    </a-scene>
 
     <script>
       // Add event listener to the clickable plane

@@ -7,8 +7,8 @@
     <title>VR Home Base</title>
   </head>
   <body>
-    <a-scene inspector>
-      <!-- Asset Items -->
+    <a-scene>
+      <!-- 3D-Model -->
       <a-asset-item
         id="HomeVR"
         src="/assets/classroom_merged.glb"></a-asset-item>
@@ -24,7 +24,19 @@
           color="black"
           text=""
           rotation="0 90 0"></a-text>
-
+        <a-text
+          value="Developed by Nabilah"
+          position="4.71 0.38307 -5.23"
+          color="black"
+          text=""
+          rotation="0 -90 0"></a-text>
+        <a-text
+          value="GitHub: Nabz-Raven"
+          position="4.69 0.73 -4.12"
+          color="black"
+          text=""
+          rotation="0 -90 0"></a-text>
+        <!--VR MENU BUTTONS-->
         <!-- Hub -->
         <a-entity
           position="-4.708 1.22 3.13"
@@ -195,12 +207,14 @@
           }
         </script>
       </a-entity>
+
+      <!--CAMERA-->
       <a-camera
         position="1.20065 0.49281 -0.39881"
         rotation="0 90 0"
         wasd-controls="
-    acceleration: 30;
-    easing: 20;">
+    acceleration: 25;
+    easing: 10;">
         <!--Cursor Circle-->
         <a-cursor color="red"></a-cursor>
       </a-camera>

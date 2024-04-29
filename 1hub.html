@@ -16,8 +16,6 @@
       <a-sky
         src="/pics/The Hub 360 Picture.jpg"
         rotation="0 -90 0"
-        material=""
-        geometry=""
         position="0 -31.06 0"></a-sky>
 
       <!-- Add text on the picture -->
@@ -35,15 +33,8 @@
         width="3"
         height="3"
         rotation="0 -49.85 0"
-        material=""
-        geometry=""
         id="clickablePlane">
-        <a-image
-          src="/pics/hublanding.jpg"
-          width="3"
-          height="3"
-          material=""
-          geometry=""></a-image>
+        <a-image src="/pics/hublanding.jpg" width="3" height="3"></a-image>
         <a-text
           value="Click on Video"
           color="black"
@@ -61,9 +52,7 @@
           depth="1"
           height="1"
           width="1"
-          onclick="window.location.href = '/vrhome.html';"
-          material=""
-          geometry=""></a-box>
+          onclick="window.location.href = '/vrhome.html';"></a-box>
         <a-text
           value="Back to Menu"
           color="white"
@@ -74,17 +63,9 @@
       <a-camera
         position="1.20065 1.53475 -0.39881"
         rotation="-8.823550045014683 126.16530648780733 0"
-        wasd-controls="acceleration: 30"
-        data-aframe-inspector-original-camera=""
-        camera=""
-        look-controls="">
+        wasd-controls="acceleration: 25; easing: 10;">
         <!--Cursor Circle-->
-        <a-cursor
-          color="red"
-          geometry=""
-          material=""
-          raycaster=""
-          cursor=""></a-cursor>
+        <a-cursor color="red"></a-cursor>
       </a-camera>
       <div class="a-loader-title" style="display: none">
         Hub 360 Picture
