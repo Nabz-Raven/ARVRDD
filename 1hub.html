@@ -45,28 +45,18 @@
       </a-plane>
 
       <!--Return VR HOME-->
-
       <a-entity position="-2.97 -0.06 -5.44047" rotation="0.36 27.8 0">
         <a-box
           depth="1"
           height="1"
           width="1"
-          onclick="window.location.href = '/vrhome.html';">
-          <!-- Add animation to the box -->
-          <a-animation
-            attribute="material.src"
-            dur="2000"
-            to="url(pics/box.gif)"
-            direction="alternate"
-            repeat="indefinite">
-          </a-animation>
+          onclick="window.location.href = '/vrhome.html';"
+          material="src: /pics/box.gif">
         </a-box>
         <a-text
           value="Back to Menu"
           color="white"
-          position="-0.7 0.68 0"
-          text="">
-        </a-text>
+          position="-0.7 0.68 0"></a-text>
       </a-entity>
 
       <a-camera
@@ -76,10 +66,8 @@
         <!--Cursor Circle-->
         <a-cursor color="red"></a-cursor>
       </a-camera>
-      <div class="a-loader-title" style="display: none">
-        Hub 360 Picture
-      </div></a-scene
-    >
+      <div class="a-loader-title" style="display: none">Hub 360 Picture</div>
+    </a-scene>
 
     <script>
       // Add event listener to the clickable plane

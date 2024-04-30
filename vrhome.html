@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <script src="/aframe.js"></script>
-
     <title>VR Home Base</title>
   </head>
   <body>
     <a-scene>
+      <!-- 3D-Model -->
+      <!--ASSET-CLASSROOM-->
+      <a-asset-item
+        id="HomeVR"
+        src="/assets/classroom_merged.glb"></a-asset-item>
       <!--VIDEOS-->
       <a-assets>
         <video
@@ -23,13 +27,7 @@
         height="2.25"
         position="-1.14 0.66 -6.18"
         scale="1.28 1.03 1"></a-video>
-
-      <!-- 3D-Model -->
-      <!--ASSET-CLASSROOM-->
-      <a-asset-item
-        id="HomeVR"
-        src="/assets/classroom_merged.glb"></a-asset-item>
-
+      <!--VR MENU-->
       <a-entity id="vrmenu" position="0 -1 0" visible="">
         <a-gltf-model
           src="#HomeVR"
