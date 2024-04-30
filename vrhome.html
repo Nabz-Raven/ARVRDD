@@ -12,12 +12,17 @@
       <a-asset-item
         id="HomeVR"
         src="/assets/classroom_merged.glb"></a-asset-item>
-
+      <!--IMAGES-->
+      <a-image
+        src="/pics/lsbulogo1.png"
+        position="x y z"
+        scale="x y z"></a-image>
       <a-entity id="vrmenu" position="0 -1 0" visible="">
         <a-gltf-model
           src="#HomeVR"
           scale=""
           gltf-model="/assets/classroom_merged.glb"></a-gltf-model>
+        <!--TEXT-->
         <a-text
           value="VR Menu"
           position="-4.69 2.08 0.43"
@@ -26,16 +31,17 @@
           rotation="0 90 0"></a-text>
         <a-text
           value="Developed by Nabilah"
-          position="4.71 0.38307 -5.23"
+          position="4.71 0.30307 -5.23"
           color="black"
-          text=""
-          rotation="0 -90 0"></a-text>
+          rotation="0 -90 0"
+          scale="0.85 0.78 1"></a-text>
         <a-text
           value="GitHub: Nabz-Raven"
-          position="4.69 0.73 -4.12"
+          position="-4.72 0.28 5.28433"
           color="black"
-          text=""
-          rotation="0 -90 0"></a-text>
+          rotation="0 90.04 0"
+          scale="0.66 0.61 1"></a-text>
+
         <!--VR MENU BUTTONS-->
         <!-- Hub -->
         <a-entity
@@ -57,7 +63,6 @@
             material="color: #800080; emissive: #000000"
             geometry="height: 0.53"></a-plane>
         </a-entity>
-
         <!-- JavaScript function for Hub -->
         <script>
           function navigateToNewEnvironment() {
@@ -83,7 +88,6 @@
             position="0.52 -0.04 -0.07"
             scale="2.06 0.59 0.14001"></a-plane>
         </a-entity>
-
         <!-- JavaScript function for Extension -->
         <script>
           function goToExtension() {
@@ -111,7 +115,6 @@
             position="0.27 0.02 0"
             scale="2.01 0.61 1.53"></a-plane>
         </a-entity>
-
         <!-- JavaScript function for Keyworth Centre -->
         <script>
           function goToKeyworth() {
@@ -119,26 +122,7 @@
             window.location.href = "3keyworth.html";
           }
         </script>
-        <!-- Faraday -->
-        <a-entity position="-5 -0.5 2.5">
-          <a-text value="Faraday" color="black" text=""></a-text>
-          <a-plane
-            color="orange"
-            width="0.5"
-            height="0.5"
-            depth="0.1"
-            onclick="goToFaraday()"
-            material=""
-            geometry=""></a-plane>
-        </a-entity>
 
-        <!-- JavaScript function for Faraday -->
-        <script>
-          function goToFaraday() {
-            // Define the action you want to perform when clicked, like navigating to a new page
-            window.location.href = "4faraday.html";
-          }
-        </script>
         <!-- Robot -->
         <a-entity position="-4.72 1.31 -1.91" rotation="0 90 0">
           <a-text
@@ -158,7 +142,6 @@
             position="-0.1 -0.12 0"
             scale="1.38 0.7 1"></a-plane>
         </a-entity>
-
         <!-- JavaScript function for Robot -->
         <script>
           function goToRobot() {
@@ -167,7 +150,7 @@
           }
         </script>
 
-        <!-- Faraday (second instance) -->
+        <!-- Faraday  -->
         <a-entity position="-4.72 1.67 -0.37" rotation="0 90 0">
           <a-text value="Faraday" color="black" text="color: #ffffff"></a-text>
           <a-plane
@@ -181,7 +164,14 @@
             position="0.41 0 0"
             scale="1.76 0.62 1"></a-plane>
         </a-entity>
-
+        <!-- JavaScript function for Faraday -->
+        <script>
+          function goToFaraday() {
+            // Define the action you want to perform when clicked, like navigating to a new page
+            window.location.href = "4faraday.html";
+          }
+        </script>
+        <!--RETURN TO HOMEPAGE-->
         <a-entity position="-4.663 1.73 -2.4" rotation="0 90 0">
           <a-text
             value="Return Home"
@@ -199,7 +189,6 @@
             position="0.72 -0.01 0"
             scale="2.86 0.6 1"></a-plane>
         </a-entity>
-
         <script>
           function returnHome() {
             // Navigate to the home page (index.html)
