@@ -8,17 +8,28 @@
   </head>
   <body>
     <a-scene>
+      <!--VIDEOS-->
+      <a-assets>
+        <video
+          id="my-video"
+          src="/videos/London South Bank University.mp4"
+          autoplay
+          loop
+          muted></video>
+      </a-assets>
+      <a-video
+        src="#my-video"
+        width="4"
+        height="2.25"
+        position="-1.14 0.66 -6.18"
+        scale="1.28 1.03 1"></a-video>
+
       <!-- 3D-Model -->
-      <!--CLASSROOM-->
+      <!--ASSET-CLASSROOM-->
       <a-asset-item
         id="HomeVR"
         src="/assets/classroom_merged.glb"></a-asset-item>
-      <!--IMAGES-->
-      <a-image
-        src="/pics/lsbulogo.jpg"
-        rotation="0 -90 0"
-        position="4.72 0.87 1.35"
-        scale="5.6 1.8 1"></a-image>
+
       <a-entity id="vrmenu" position="0 -1 0" visible="">
         <a-gltf-model
           src="#HomeVR"
@@ -47,28 +58,39 @@
         <!--VR MENU BUTTONS-->
         <!-- Hub -->
         <a-entity
-          position="-4.708 1.22 3.13"
+          position="-4.648 1.20 2.66"
           rotation="0 90 0"
-          scale="2.15 0.7 1">
+          scale="1.5 0.5 0.5">
           <a-text
             value="Hub"
             color="black"
-            text="color: #ffffff"
+            text="color: #000000"
             scale="0.67 1.27 1.73"
-            position="-0.14 -0.03 0"></a-text>
-          <a-plane
-            color="blue"
-            width="0.5"
+            position="-0.15 0.04 0.14"
+            visible=""></a-text>
+          <a-box
+            width="1"
             height="0.5"
-            depth="0.1"
+            depth="0.2"
             onclick="navigateToNewEnvironment()"
-            material="color: #800080; emissive: #000000"
-            geometry="height: 0.53"></a-plane>
+            material="src: pics/texture.jpg"
+            animation__hover="property: scale; to: 1.3 1.3 1.3; dur: 200; startEvents: mouseenter"
+            animation__leave="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
+            geometry="">
+          </a-box>
         </a-entity>
+
         <!-- JavaScript function for Hub -->
         <script>
           function navigateToNewEnvironment() {
-            window.location.href = "1hub.html"; // Replace '1hub.html' with the URL of your destination page
+            window.location.href = "1hub.html";
+          }
+        </script>
+
+        <!-- JavaScript function for Hub -->
+        <script>
+          function navigateToNewEnvironment() {
+            window.location.href = "1hub.html";
           }
         </script>
 
@@ -199,6 +221,58 @@
         </script>
       </a-entity>
 
+      <!--IMAGES-->
+      <a-image
+        src="/pics/lsbulogo.jpg"
+        rotation="0 -90 0"
+        position="4.72 0.87 1.35"
+        scale="5.6 1.8 1"></a-image>
+
+      <a-entity>
+        <a-plane
+          id="imagePlane"
+          width="3"
+          height="2"
+          position="-2.06 0.5 6.56"
+          geometry=""
+          src="/pics/hub2landing.jpg"
+          rotation="0 180 0"
+          scale="1.31 0.8 1"></a-plane
+      ></a-entity>
+      <script>
+        // Define an array of image URLs
+        var imageUrls = [
+          "/pics/hublanding.jpg",
+          "/pics/lsbuadmin.jpg",
+          "/pics/faraday.jpg",
+          "/pics/library.jpg",
+          "/pics/hub.jpg",
+          "/pics/hub2landing.jpg",
+          // Add more image URLs as needed
+        ];
+
+        var imageIndex = 0; // Initialize index to display the first image
+
+        // Function to change the texture of the plane to the next image
+        function changeImage() {
+          // Get the plane element
+          var plane = document.querySelector("#imagePlane");
+
+          // Set the texture of the plane to the next image URL
+          plane.setAttribute("src", imageUrls[imageIndex]);
+
+          // Increment the index to display the next image in the array
+          imageIndex = (imageIndex + 1) % imageUrls.length;
+        }
+
+        // Call the changeImage function every 3 seconds to cycle through the images
+        setInterval(changeImage, 3000); // Change image every 3 seconds
+      </script>
+      <a-entity
+        light="intensity: 0.6; castShadow: true"
+        position="0.62922 -9.30538 0.28708"
+        data-aframe-default-light=""
+        aframe-injected=""></a-entity>
       <!--CAMERA-->
       <a-camera
         position="1.20065 0.49281 -0.39881"
