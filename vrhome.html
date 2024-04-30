@@ -75,43 +75,38 @@
             onclick="navigateToNewEnvironment()"
             material="src: pics/texture.jpg"
             animation__hover="property: scale; to: 1.3 1.3 1.3; dur: 200; startEvents: mouseenter"
+            animation__leave="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave">
+          </a-box>
+        </a-entity>
+        <!-- JavaScript function for Hub -->
+        <script>
+          function navigateToNewEnvironment() {
+            window.location.href = "1hub.html";
+          }
+        </script>
+        <!--EXTENSION-->
+        <a-entity
+          position="-4.648 1.7 2.03"
+          rotation="0 90 0"
+          scale="1.5 0.5 0.5">
+          <a-text
+            value="Extension"
+            color="black"
+            text="color: #000000"
+            scale="0.67 1.27 1.73"
+            position="-0.34 0.02 0.19"></a-text>
+          <a-box
+            width="1"
+            height="0.5"
+            depth="0.2"
+            onclick="goToExtension()"
+            material="src: pics/texture.jpg"
+            animation__hover="property: scale; to: 1.3 1.3 1.3; dur: 200; startEvents: mouseenter"
             animation__leave="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
             geometry="">
           </a-box>
         </a-entity>
 
-        <!-- JavaScript function for Hub -->
-        <script>
-          function navigateToNewEnvironment() {
-            window.location.href = "1hub.html";
-          }
-        </script>
-
-        <!-- JavaScript function for Hub -->
-        <script>
-          function navigateToNewEnvironment() {
-            window.location.href = "1hub.html";
-          }
-        </script>
-
-        <!-- Extension -->
-        <a-entity position="-4.61 1.73 2.71" rotation="0 90 0" scale="1 1 1.03">
-          <a-text
-            value="Extension"
-            color="black"
-            text="color: #ffffff"
-            position="0.01 -0.02 -0.05"></a-text>
-          <a-plane
-            color="green"
-            width="0.5"
-            height="0.5"
-            depth="0.1"
-            onclick="goToExtension()"
-            material=""
-            geometry=""
-            position="0.52 -0.04 -0.07"
-            scale="2.06 0.59 0.14001"></a-plane>
-        </a-entity>
         <!-- JavaScript function for Extension -->
         <script>
           function goToExtension() {
@@ -121,24 +116,28 @@
         </script>
 
         <!-- KEYWORTH CENTRE -->
-        <a-entity position="-4.71 1.18 0.84" rotation="0 90 0">
+        <a-entity
+          position="-4.648 1.23 0.3"
+          rotation="0 90 0"
+          scale="1.5 0.5 0.5">
           <a-text
             value="Keyworth"
             color="black"
-            text="color: #ffffff"
-            position="-0.2 0.03 0"
-            scale=""></a-text>
-          <a-plane
-            color="red"
-            width="0.5"
+            text="color: #000000"
+            scale="0.67 1.27 1.73"
+            position="-0.32 0.03 0.14"
+            visible=""></a-text>
+          <a-box
+            width="1"
             height="0.5"
-            depth="0.1"
+            depth="0.2"
             onclick="goToKeyworth()"
-            material=""
-            geometry=""
-            position="0.27 0.02 0"
-            scale="2.01 0.61 1.53"></a-plane>
+            material="src: pics/texture.jpg"
+            animation__hover="property: scale; to: 1.3 1.3 1.3; dur: 200; startEvents: mouseenter"
+            animation__leave="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave">
+          </a-box>
         </a-entity>
+
         <!-- JavaScript function for Keyworth Centre -->
         <script>
           function goToKeyworth() {
@@ -148,23 +147,27 @@
         </script>
 
         <!-- Robot -->
-        <a-entity position="-4.72 1.31 -1.91" rotation="0 90 0">
+        <a-entity
+          position="-4.648 1.71 -0.38"
+          rotation="0 90 0"
+          scale="1.5 0.5 0.5">
           <a-text
             value="Robot"
             color="black"
-            text="color: #ffffff"
-            position="-0.42 -0.13 0.01"
-            scale=""></a-text>
-          <a-plane
-            color="yellow"
-            width="0.5"
+            text="color: #000000"
+            scale="0.67 1.27 1.73"
+            position="-0.21 0.03 0.14"
+            visible=""></a-text>
+          <a-box
+            width="1"
             height="0.5"
-            depth="0.1"
+            depth="0.2"
             onclick="goToRobot()"
-            material=""
-            geometry=""
-            position="-0.1 -0.12 0"
-            scale="1.38 0.7 1"></a-plane>
+            material="src: pics/texture.jpg"
+            animation__hover="property: scale; to: 1.3 1.3 1.3; dur: 200; startEvents: mouseenter"
+            animation__leave="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
+            geometry="">
+          </a-box>
         </a-entity>
         <!-- JavaScript function for Robot -->
         <script>
@@ -175,18 +178,26 @@
         </script>
 
         <!-- Faraday  -->
-        <a-entity position="-4.72 1.67 -0.37" rotation="0 90 0">
-          <a-text value="Faraday" color="black" text="color: #ffffff"></a-text>
-          <a-plane
-            color="orange"
-            width="0.5"
+        <a-entity
+          position="-4.648 1.22 -2.31"
+          rotation="0 90 0"
+          scale="1.5 0.5 0.5">
+          <a-text
+            value="Faraday"
+            color="black"
+            text="color: #000000"
+            scale="0.67 1.27 1.73"
+            position="-0.27 0 0.14"></a-text>
+          <a-box
+            width="1"
             height="0.5"
-            depth="0.1"
+            depth="0.2"
             onclick="goToFaraday()"
-            material=""
-            geometry=""
-            position="0.41 0 0"
-            scale="1.76 0.62 1"></a-plane>
+            material="src: pics/texture.jpg"
+            animation__hover="property: scale; to: 1.3 1.3 1.3; dur: 200; startEvents: mouseenter"
+            animation__leave="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
+            geometry="">
+          </a-box>
         </a-entity>
         <!-- JavaScript function for Faraday -->
         <script>
@@ -196,22 +207,26 @@
           }
         </script>
         <!--RETURN TO HOMEPAGE-->
-        <a-entity position="-4.663 1.73 -2.4" rotation="0 90 0">
+        <a-entity
+          position="-4.648 1.7 -2.99"
+          rotation="0 90 0"
+          scale="1.5 0.5 0.5">
           <a-text
-            value="Return Home"
+            value="Return"
             color="black"
-            text="color: #ffffff"
-            position="0.08 0 0"></a-text>
-          <a-plane
-            color="purple"
-            width="0.5"
+            text="color: #white"
+            scale="0.67 1.27 1.73"
+            position="-0.23 0.02 0.19"></a-text>
+          <a-box
+            width="1"
             height="0.5"
-            depth="0.1"
+            depth="0.2"
             onclick="returnHome()"
-            material="color: #00ff40"
-            geometry=""
-            position="0.72 -0.01 0"
-            scale="2.86 0.6 1"></a-plane>
+            material="src: pics/hub2landing.jpg"
+            animation__hover="property: scale; to: 1.3 1.3 1.3; dur: 200; startEvents: mouseenter"
+            animation__leave="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
+            geometry="">
+          </a-box>
         </a-entity>
         <script>
           function returnHome() {
