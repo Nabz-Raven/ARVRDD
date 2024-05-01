@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="a-fullscreen">
   <head>
+    <!-- Document metadata -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- A-Frame library -->
     <script src="/aframe.js"></script>
+    <!-- Title of the page -->
     <title>VR Home Base</title>
   </head>
   <body>
+    <!-- A-Frame scene -->
     <a-scene>
       <!-- Assets -->
       <!-- Define 3D model and video assets -->
@@ -36,7 +40,7 @@
           src="#HomeVR"
           scale=""
           gltf-model="/assets/classroom_merged.glb"></a-gltf-model>
-        <!--TEXT-->
+        <!-- Text elements -->
         <a-text
           value="VR Menu"
           position="-4.69 2.08 0.43"
@@ -238,13 +242,17 @@
       </a-entity>
 
       <!--IMAGES-->
+      <!-- Static and slideshow images -->
+      <!-- Static image -->
       <a-image
         src="/pics/lsbulogo.jpg"
         rotation="0 -90 0"
         position="4.72 0.87 1.35"
         scale="5.6 1.8 1"></a-image>
       <!--SLIDESHOW IMAGES-->
+      <!-- Slideshow implemented using JavaScript -->
       <a-entity>
+        <!-- Plane for slideshow -->
         <a-plane
           id="imagePlane"
           width="3"
@@ -255,6 +263,7 @@
           rotation="0 180 0"
           scale="1.31 0.8 1"></a-plane
       ></a-entity>
+      <!-- JavaScript code for slideshow -->
       <script>
         // Define an array of image URLs
         var imageUrls = [
@@ -284,18 +293,20 @@
         // Call the changeImage function every 3 seconds to cycle through the images
         setInterval(changeImage, 3000); // Change image every 3 seconds
       </script>
-      <!--LIGHTING-->
+      <!-- Lighting -->
+      <!-- Ambient lighting for the scene -->
       <a-entity
         light="intensity: 0.6; castShadow: true"
         position="0.62922 -9.30538 0.28708"
         data-aframe-default-light=""
         aframe-injected=""></a-entity>
-      <!--CAMERA-->
+      <!-- Camera -->
+      <!-- User's perspective camera -->
       <a-camera
         position="1.20065 0.49281 -0.39881"
         rotation="-27.501974166279524 90 0"
         wasd-controls="acceleration: 25 easing:10;">
-        <!--Cursor Circle-->
+        <!-- Cursor for interaction -->
         <a-cursor color="red"></a-cursor>
       </a-camera>
     </a-scene>
