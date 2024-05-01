@@ -8,8 +8,8 @@
   </head>
   <body>
     <a-scene>
-      <!-- 3D-Model -->
-      <!--ASSET-CLASSROOM-->
+      <!-- Assets -->
+      <!-- Define 3D model and video assets -->
       <a-asset-item
         id="HomeVR"
         src="/assets/classroom_merged.glb"></a-asset-item>
@@ -29,7 +29,9 @@
         position="-1.14 0.66 -6.18"
         scale="1.28 1.03 1"></a-video>
       <!--VR MENU-->
+      <!-- Entity containing VR menu elements -->
       <a-entity id="vrmenu" position="0 -1 0" visible="">
+        <!-- 3D Model -->
         <a-gltf-model
           src="#HomeVR"
           scale=""
@@ -55,6 +57,7 @@
           scale="0.66 0.61 1"></a-text>
 
         <!--VR MENU BUTTONS-->
+        <!-- Buttons for different locations -->
         <!--HUB BUTTON-->
         <a-entity
           position="-4.648 1.20 2.66"
