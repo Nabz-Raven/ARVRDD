@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="a-fullscreen">
+<html lang="en" class="a-fullscreen">
   <head>
     <meta charset="UTF-8" />
     <script src="/aframe.js"></script>
@@ -54,7 +54,7 @@
           scale="0.66 0.61 1"></a-text>
 
         <!--VR MENU BUTTONS-->
-        <!-- Hub -->
+        <!--HUB BUTTON-->
         <a-entity
           position="-4.648 1.20 2.66"
           rotation="0 90 0"
@@ -79,10 +79,11 @@
         <!-- JavaScript function for Hub -->
         <script>
           function navigateToNewEnvironment() {
+            // Define the action to perform when clicked,navigating to a new page
             window.location.href = "1hub.html";
           }
         </script>
-        <!--EXTENSION-->
+        <!--EXTENSION BUTTON-->
         <a-entity
           position="-4.648 1.7 2.03"
           rotation="0 90 0"
@@ -104,16 +105,15 @@
             geometry="">
           </a-box>
         </a-entity>
-
         <!-- JavaScript function for Extension -->
         <script>
           function goToExtension() {
-            // Define the action you want to perform when clicked, like navigating to a new page
+            // Define the action to perform when clicked,navigating to a new page
             window.location.href = "2extension.html";
           }
         </script>
 
-        <!-- KEYWORTH CENTRE -->
+        <!-- KEYWORTH CENTRE BUTTON-->
         <a-entity
           position="-4.648 1.23 0.3"
           rotation="0 90 0"
@@ -135,16 +135,15 @@
             animation__leave="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave">
           </a-box>
         </a-entity>
-
         <!-- JavaScript function for Keyworth Centre -->
         <script>
           function goToKeyworth() {
-            // Define the action you want to perform when clicked, like navigating to a new page
+            // Define the action to perform when clicked,navigating to a new page
             window.location.href = "3keyworth.html";
           }
         </script>
 
-        <!-- Robot -->
+        <!-- ROBOT BUTTON-->
         <a-entity
           position="-4.648 1.71 -0.38"
           rotation="0 90 0"
@@ -170,12 +169,12 @@
         <!-- JavaScript function for Robot -->
         <script>
           function goToRobot() {
-            // Define the action you want to perform when clicked, like navigating to a new page
+            // Define the action to perform when clicked,navigating to a new page
             window.location.href = "5.robotvideo.html";
           }
         </script>
 
-        <!-- Faraday  -->
+        <!--FARADAY BUTTON-->
         <a-entity
           position="-4.648 1.22 -2.31"
           rotation="0 90 0"
@@ -281,6 +280,7 @@
         // Call the changeImage function every 3 seconds to cycle through the images
         setInterval(changeImage, 3000); // Change image every 3 seconds
       </script>
+      <!--LIGHTING-->
       <a-entity
         light="intensity: 0.6; castShadow: true"
         position="0.62922 -9.30538 0.28708"
@@ -289,10 +289,8 @@
       <!--CAMERA-->
       <a-camera
         position="1.20065 0.49281 -0.39881"
-        rotation="0 90 0"
-        wasd-controls="
-    acceleration: 25;
-    easing: 10;">
+        rotation="-27.501974166279524 90 0"
+        wasd-controls="acceleration: 25 easing:10;">
         <!--Cursor Circle-->
         <a-cursor color="red"></a-cursor>
       </a-camera>

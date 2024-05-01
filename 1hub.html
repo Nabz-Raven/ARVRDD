@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html class="a-fullscreen">
+<html lang="en" class="a-fullscreen">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <script src="/aframe.js"></script>
     <title>Hub Picture 360</title>
   </head>
   <body>
-    <a-scene
-      inspector=""
-      keyboard-shortcuts=""
-      screenshot=""
-      vr-mode-ui=""
-      device-orientation-permission-ui="">
+    <a-scene>
       <!-- Add a 360-degree panoramic image -->
       <a-sky
         src="/pics/The Hub 360 Picture.jpg"
@@ -23,8 +20,7 @@
         value="Welcome to The Hub"
         color="white"
         position="-1 2 -4"
-        scale="2 2 2"
-        text=""></a-text>
+        scale="2 2 2"></a-text>
 
       <!-- Add a plane with an image -->
       <a-plane
@@ -58,7 +54,7 @@
           color="white"
           position="-0.7 0.68 0"></a-text>
       </a-entity>
-
+      <!--Camera-->
       <a-camera
         position="1.20065 1.53475 -0.39881"
         rotation="-8.823550045014683 126.16530648780733 0"
@@ -66,7 +62,6 @@
         <!--Cursor Circle-->
         <a-cursor color="red"></a-cursor>
       </a-camera>
-      <div class="a-loader-title" style="display: none">Hub 360 Picture</div>
     </a-scene>
 
     <script>
